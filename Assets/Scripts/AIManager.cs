@@ -27,10 +27,8 @@ public class AIManager : MonoBehaviour
         if(currentTarget != null && AIStatsManager.lookingForNeeds == true)
             MoveToTarget();
 
-        float rayLength = GetComponent<SphereCollider>().radius / 2;
-        Debug.DrawRay(transform.position, -transform.forward * rayLength, Color.red); 
+        Debug.DrawLine(transform.position, currentTarget.position, Color.red, 0.1f);
 
-        transform.LookAt(new Vector3(0, currentTarget.position.y, 0));
     }
 
     void OnTriggerEnter(Collider other) 

@@ -14,12 +14,12 @@ public class AIStatsManager : MonoBehaviour
         if(need <= 0) 
             need = 0;
 
-        if(need < 20)
+        if(need < 30)
             lookingForNeeds = true;
         else
             lookingForNeeds = false;
         
-        need -= (1 * Time.deltaTime) / 4;
+        need -= (1 * Time.deltaTime) * 5 /*/ 4*/;
     }
 
     void OnTriggerEnter(Collider other)
