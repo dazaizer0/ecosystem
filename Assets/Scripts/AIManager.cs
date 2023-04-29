@@ -24,7 +24,7 @@ public class AIManager : MonoBehaviour
     void Update()
     {
 
-        if(currentTarget != null)
+        if(currentTarget != null && AIStatsManager.lookingForNeeds == true)
             MoveToTarget();
 
         float rayLength = GetComponent<SphereCollider>().radius / 2;
